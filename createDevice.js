@@ -66,4 +66,30 @@ var device = { "device_manufacturer": "leaksmart",
   "status": "online"
 };
 
-csrfRequests.requestAPIWithCSRF(createDevice, device);
+var devicesensor = { "device_manufacturer": "leaksmart",
+  "sensor_pod_id": "999999",
+  "name": "Sensor",
+  "hub_id": "393773",
+  "upc_code": "waxman_sensor",
+  "model_name": "leakSMART Sensor",
+  "manufacturer_device_model": "leaksmart_sensor",
+  "username": "usersensor",	// user id must exist ( see createUser.js)
+  "location": "kitchen",
+  "status": "online"
+};
+
+var devicesmokedetector = { "device_manufacturer": "leaksmart",
+  "smoke_detector_id": "183050",
+  "name": "Smoke Detector",
+  "hub_id": "393773",
+  "upc_code": "waxman_sensor",
+  "model_name": "leakSMART Sensor",
+  "manufacturer_device_model": "leaksmart_sensor",
+  "username": "usersmoke",	// user id must exist ( see createUser.js)
+  "location": "kitchen",
+  "status": "online"
+};
+
+//csrfRequests.requestAPIWithCSRF(createDevice, device);
+csrfRequests.requestAPIWithCSRF(createDevice, devicesensor);
+//csrfRequests.requestAPIWithCSRF(createDevice, devicesmokedetector);

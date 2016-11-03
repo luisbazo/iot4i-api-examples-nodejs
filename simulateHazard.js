@@ -72,4 +72,43 @@ var parameters = {
     "type": "wink"
   };
 
-csrfRequests.requestAPIWithCSRF(simulateHazard, parameters);
+var parameterssensor = {
+  "payload": {
+      "usr": "user1",	// user id must exist ( see createUser.js)
+      "liquid_detected": "true",
+      "policy_id": "123",
+      "temperature":"12",
+      "opened": "true",
+      "locked": "false",
+      "extra": {
+        "locationDesc": "kitchen",
+        "deviceDesc": "Amazing device"
+      },
+    },
+    "outputtype": "evt",
+    "devicetype": "sensor_pods",
+    "deviceid": "wink",
+    "type": "wink"
+  };
+
+var parameterssmoke = {
+  "payload": {
+      "usr": "user1",	// user id must exist ( see createUser.js)
+      "smoke_detected": "true",
+      "co_detected": "true",
+      "policy_id": "123",
+      "temperature":"12",
+      "extra": {
+        "locationDesc": "kitchen",
+        "deviceDesc": "Amazing device"
+      },
+    },
+    "outputtype": "evt",
+    "devicetype": "smoke_detectors",
+    "deviceid": "wink",
+    "type": "wink"
+  };
+
+
+csrfRequests.requestAPIWithCSRF(simulateHazard, parameterssensor);
+csrfRequests.requestAPIWithCSRF(simulateHazard, parameterssmoke);

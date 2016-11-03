@@ -59,4 +59,18 @@ var userShield = {
   "hazardDetectionOnCloud": true
 };
 
-csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShield);
+var userShieldSensorOpened = {
+  "shieldUUID": "27", // 1 is a predefined water leak shield in the database. You can also use the ID from createShield.js
+  "username": "usersensor", // user id must exist ( see createUser.js)
+  "hazardDetectionOnCloud": true
+};
+
+var userShieldSmokeDetected = {
+  "shieldUUID": "28", // 1 is a predefined water leak shield in the database. You can also use the ID from createShield.js
+  "username": "usersmoke", // user id must exist ( see createUser.js)
+  "hazardDetectionOnCloud": true
+};
+
+//csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShield);
+csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldSensorOpened);
+csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldSmokeDetected);

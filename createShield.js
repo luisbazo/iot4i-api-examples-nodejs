@@ -70,4 +70,38 @@ var shield = {
   "shieldParameters": []
 };
 
+var shield = {
+  "UUID": "27",	// must be unique
+  "name": "shieldsensoropened",
+  "type": "Environmental Measurements",
+  "description": "Demo detection if there is a locked opened",
+  "image": "shieldWater",
+  "canBeDisabled": false,
+  "hazardDetectionOnCloud": true,
+  "jsCodeMethod": "demoShield",	// must exist as a function in the jscode for the shield code
+  "actions": [
+    "pushios"
+  ],
+  "potentialClaimAmount": "10",
+  "shieldParameters": []
+};
+
+var shieldsmokedetected = {
+  "UUID": "28",	// must be unique
+  "name": "shieldsmokedetected",
+  "type": "Environmental Measurements",
+  "description": "Demo detection if there is a smoke",
+  "image": "shieldWater",
+  "canBeDisabled": false,
+  "hazardDetectionOnCloud": true,
+  "jsCodeMethod": "demoShield",	// must exist as a function in the jscode for the shield code
+  "actions": [
+    "pushios"
+  ],
+  "potentialClaimAmount": "10",
+  "shieldParameters": []
+};
+
 csrfRequests.requestAPIWithCSRF(createShield, shield);
+//csrfRequests.requestAPIWithCSRF(createShield, shieldsensoropened);
+//csrfRequests.requestAPIWithCSRF(createShield, shieldsmokedetected);

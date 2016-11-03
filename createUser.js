@@ -24,7 +24,8 @@ var csrfRequests = require("./csrfRequests.js");
  */
 var createUser = function(user) {
   console.info("Using the /user REST endpoint to create a new user..." );
-  
+  console.info(config.api + "/user" + config.credentials);
+
   request({
     url: config.api + "/user",
     method: "POST",
@@ -62,9 +63,38 @@ var user = { "username": "user1",
   "accessLevel": 100, // set to 10 for users that have dashboard access
   "address": "42 Wallaby Way, Sydney",
   "email": "user@example.com",
-  "deviceId": "demoDevice1",
-  "deviceType": "wink",
+  "deviceId": "demoDeviceSensor1",
+  "deviceType": "sensor_pods",
   "type": "wink"
 };
 
-csrfRequests.requestAPIWithCSRF(createUser, user);
+var usersensor = { "username": "usersensor",
+  "fullname": "John Doe",
+  "firstname": "John",
+  "lastname": "Doe",
+  "password": "user1234",
+  "accessLevel": 100, // set to 10 for users that have dashboard access
+  "address": "42 Wallaby Way, Sydney",
+  "email": "user@example.com",
+  "deviceId": "demoDeviceSensor2",
+  "deviceType": "sensor_pods",
+  "type": "wink"
+};
+
+var usersmoke = { "username": "usersmoke",
+  "fullname": "John Doe",
+  "firstname": "John",
+  "lastname": "Doe",
+  "password": "user1234",
+  "accessLevel": 100, // set to 10 for users that have dashboard access
+  "address": "42 Wallaby Way, Sydney",
+  "email": "user@example.com",
+  "deviceId": "demoDeviceSmoke1",
+  "deviceType": "smoke_detectors",
+  "type": "wink"
+};
+
+
+//csrfRequests.requestAPIWithCSRF(createUser, user);
+csrfRequests.requestAPIWithCSRF(createUser, usersensor);
+//csrfRequests.requestAPIWithCSRF(createUser, usersmoke);

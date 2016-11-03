@@ -64,4 +64,22 @@ var shieldCode = {
   "code": code.toString()
 };
 
-csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCode);
+var codesensor = fs.readFileSync("./resource/shieldCodeSensor.js");
+var shieldCodeSensor = {
+  "name": "shieldsensor",
+  "shieldUUID": "27",	// the shield must exist, see createShield.js
+  "type": "shield",
+  "code": codesensor.toString()
+};
+
+var codesmoke = fs.readFileSync("./resource/shieldCodeSmoke.js");
+var shieldCodeSmoke = {
+  "name": "shieldsmoke",
+  "shieldUUID": "28",	// the shield must exist, see createShield.js
+  "type": "shield",
+  "code": codesmoke.toString()
+};
+
+//csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCode);
+csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeSensor);
+csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeSmoke);
