@@ -102,6 +102,38 @@ var shieldsmokedetected = {
   "shieldParameters": []
 };
 
-csrfRequests.requestAPIWithCSRF(createShield, shieldliquiddetected);
+var shieldmotion = {
+  "UUID": "30",	// must be unique
+  "name": "shieldMotion",
+  "type": "Environmental Measurements Motion",
+  "description": "Demo detection if there is motion in the room",
+  "image": "shieldMotion",
+  "canBeDisabled": false,
+  "hazardDetectionOnCloud": true,
+  "jsCodeMethod": "demoShield",	// must exist as a function in the jscode for the shield code
+  "actions": [
+    "pushios"
+  ],
+  "potentialClaimAmount": "10",
+  "shieldParameters": []
+};
+
+var shieldtemperature = {
+  "UUID": "31",	// must be unique
+  "name": "shieldTemperature",
+  "type": "Environmental Measurements Temperature",
+  "description": "Demo detection if there is more than 20 C in the room",
+  "image": "shieldTemperature",
+  "canBeDisabled": false,
+  "hazardDetectionOnCloud": true,
+  "jsCodeMethod": "demoShield",	// must exist as a function in the jscode for the shield code
+  "actions": [
+    "pushios"
+  ],
+  "potentialClaimAmount": "10",
+  "shieldParameters": []
+};
+
+csrfRequests.requestAPIWithCSRF(createShield, shieldtemperature);
 //csrfRequests.requestAPIWithCSRF(createShield, shieldsensoropened);
 //csrfRequests.requestAPIWithCSRF(createShield, shieldsmokedetected);

@@ -20,10 +20,10 @@
  * <password> - read from the IoT4I Service Credentials page
  */
 var config = module.exports = {
-	api: "https://iot4insurance-api-e52019b4-5199-4eb9-8217-8e5727890e4a.mybluemix.net", // the URL must not end with /
-	aggregator: "https://iot4i-aggregator-e52019b4-5199-4eb9-8217-8e5727890e4a.mybluemix.net", // the URL must not end with /
+	api: "https://iot4insurance-api-1c254d03-5c4a-4775-865a-2bf780afd231.mybluemix.net", // the URL must not end with /
+	aggregator: "https://iot4i-aggregator-1c254d03-5c4a-4775-865a-2bf780afd231.mybluemix.net", // the URL must not end with /
 	credentials : {
 		user: "Admin",
-		pass: "4b11840b-4545-4e36-9469-26228398246d"
+		pass: "e0e2f8ed-ba7b-4994-86f7-eb80642696c0"
 	}
 };

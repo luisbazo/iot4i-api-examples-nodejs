@@ -64,22 +64,31 @@ var shieldCode = {
   "code": code.toString()
 };
 
-var codesensor = fs.readFileSync("./resource/shieldCodeSensor.js");
-var shieldCodeSensor = {
-  "name": "shieldsensor",
-  "shieldUUID": "27",	// the shield must exist, see createShield.js
+//var codesensor = fs.readFileSync("./resource/shieldCodeSensor.js");
+//var shieldCodeSensor = {
+//  "name": "shieldsensor",
+//  "shieldUUID": "27",	// the shield must exist, see createShield.js
+//  "type": "shield",
+//  "code": codesensor.toString()
+//};
+
+var codemotion = fs.readFileSync("./resource/shieldCode.js");
+var shieldCodeMotion= {
+  "name": "shieldMotion",
+  "shieldUUID": "30",	// the shield must exist, see createShield.js
   "type": "shield",
-  "code": codesensor.toString()
+  "code": codemotion.toString()
 };
 
-var codesmoke = fs.readFileSync("./resource/shieldCodeSmoke.js");
-var shieldCodeSmoke = {
-  "name": "shieldsmoke",
-  "shieldUUID": "28",	// the shield must exist, see createShield.js
+var shieldCodeTemperature= {
+  "name": "shieldTemperature",
+  "shieldUUID": "31",	// the shield must exist, see createShield.js
   "type": "shield",
-  "code": codesmoke.toString()
+  "code": codemotion.toString()
 };
 
+
+csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeTemperature);
 //csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCode);
-csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeSensor);
-csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeSmoke);
+//csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeSensor);
+//csrfRequests.requestAPIWithCSRF(createShieldCode, shieldCodeSmoke);

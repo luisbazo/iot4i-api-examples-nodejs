@@ -71,6 +71,13 @@ var userShieldSmokeDetected = {
   "hazardDetectionOnCloud": true
 };
 
+var userShieldMotionDetected = {
+  "shieldUUID": "31", // 1 is a predefined water leak shield in the database. You can also use the ID from createShield.js
+  "username": "usersensor", // user id must exist ( see createUser.js)
+  "hazardDetectionOnCloud": true
+};
+
+csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldMotionDetected);
 //csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShield);
-csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldSensorOpened);
-csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldSmokeDetected);
+//csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldSensorOpened);
+//csrfRequests.requestAPIWithCSRF(createUserShieldAssociation, userShieldSmokeDetected);

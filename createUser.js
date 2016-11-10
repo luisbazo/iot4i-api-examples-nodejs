@@ -69,15 +69,15 @@ var user = { "username": "user1",
 };
 
 var usersensor = { "username": "usersensor",
-  "fullname": "John Doe",
-  "firstname": "John",
-  "lastname": "Doe",
+  "fullname": "Luis Bazo",
+  "firstname": "Luis",
+  "lastname": "Bazo",
   "password": "user1234",
-  "accessLevel": 100, // set to 10 for users that have dashboard access
+  "accessLevel": 10, // set to 10 for users that have dashboard access
   "address": "42 Wallaby Way, Sydney",
-  "email": "user@example.com",
-  "deviceId": "demoDeviceSensor2",
-  "deviceType": "sensor_pods",
+  "email": "usersensor@example.com",
+  "deviceId": "usersensor",
+  "deviceType": "iOS", //Set iOS. IoT4I by default send events to iOS type
   "type": "wink"
 };
 
