@@ -57,14 +57,14 @@ var requestCreateShield = function( config, shield, cb) {
 
 
 createShield = function( config, shieldid, cb) {
-	
+
 	// Create a sample shield.
 	var shield = {
 	  "UUID": shieldid.toString(),	// must be unique
 	  "name": "shield"+shieldid,
 	  "type": "Environmental Measurements",
-	  "description": "Demo detection if there is a water leak",
-	  "image": "shieldWater",
+	  "description": "Demo detection if there is liquid detected false",
+	  "image": "shieldLiquidDetected",
 	  "canBeDisabled": false,
 	  "hazardDetectionOnCloud": true,
 	  "jsCodeMethod": "shield"+shieldid,	// must exist as a function in the jscode for the shield code

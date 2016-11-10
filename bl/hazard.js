@@ -59,6 +59,7 @@ var simulateHazard = function( config, username, cb) {
 	  "payload": {
 	      "usr": username,	// user id must exist ( see createUser.js)
 	      "liquid_detected": true,
+        "temperature": 23.4,
 	      "policy_id": "123",
 	      "temperature":"12",
 	      "extra": {
@@ -67,11 +68,11 @@ var simulateHazard = function( config, username, cb) {
 	      },
 	    },
 	    "outputtype": "evt",
-	    "devicetype": "wink",
-	    "deviceid": "wink",
+	    "devicetype": "iOS",
+	    "deviceid": "usersensor",
 	    "type": "wink"
 	  };
-	
+
 	csrfRequests.requestAPIWithCSRF( requestSimulateHazard, config, parameters, cb);
 }
 

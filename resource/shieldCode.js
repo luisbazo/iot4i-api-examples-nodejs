@@ -1,9 +1,18 @@
 var <shieldname>Safelet = function(payload) {
-	return (payload.liquid_detected);
+	if(parseInt(payload.temperature) > 10)
+	{
+		return true;
+	}
+	//return (!payload.liquid_detected)
+	//return (payload.liquid_detected);
 };
 
 var <shieldname>EntryCondition = function(payload) {
-	return (payload.liquid_detected);
+	if(parseInt(payload.temperature) > 10)
+	{
+		return true;
+	}
+	//return (payload.liquid_detected);
 };
 
 var <shieldname>Message = function(payload) {

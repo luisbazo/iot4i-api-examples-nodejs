@@ -46,6 +46,6 @@ var readShieldCode = function(shieldUuid) {
   });
 };
 
-var shieldUuid = "1";
+var shieldUuid = "2";
 
 readShieldCode(shieldUuid);

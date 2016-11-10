@@ -8,5 +8,5 @@ shieldCode.createShieldCode(  config, 2, function( data, err) {
 	} else {
 		console.log( "Succesfully uploaded shield code: " + data);
 	}
-	
+
 })

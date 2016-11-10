@@ -46,6 +46,6 @@ var readUserShieldAssociation = function(username) {
   });
 };
 
-var username = "demoUser1";
+var username = "usersensor";
 
 readUserShieldAssociation(username);

@@ -23,7 +23,7 @@ var csrfRequests = require("../csrfRequests.js");
  */
 var requestCreateUser = function( config, user, cb) {
   console.info("Using the /user REST endpoint to create a new user..." );
-  
+
   request({
     url: config.api + "/user",
     method: "POST",
@@ -51,7 +51,7 @@ var requestCreateUser = function( config, user, cb) {
 
 
 var createUser = function( config, id, cb) {
-	
+
 	// Create a sample user. If a user with the same username exists in the database the function will fail.
 	var user = { "username": "user"+id,
 	  "fullname": "John Doe",
@@ -62,7 +62,7 @@ var createUser = function( config, id, cb) {
 	  "address": "42 Wallaby Way, Sydney",
 	  "email": "user@example.com",
 	  "deviceId": "user"+id,
-	  "deviceType": "wink",
+	  "deviceType": "iOS",
 	  "type": "wink"
 	};
 
