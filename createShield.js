@@ -54,9 +54,9 @@ var createShield = function(shield) {
 };
 
 // Create a sample shield.
-var shield = {
+var shieldliquiddetected = {
   "UUID": "26",	// must be unique
-  "name": "demoshield",
+  "name": "demoshieldliquiddetected",
   "type": "Environmental Measurements",
   "description": "Demo detection if there is a water leak",
   "image": "shieldWater",
@@ -70,7 +70,7 @@ var shield = {
   "shieldParameters": []
 };
 
-var shield = {
+var shieldsensoropened = {
   "UUID": "27",	// must be unique
   "name": "shieldsensoropened",
   "type": "Environmental Measurements",
@@ -102,6 +102,6 @@ var shieldsmokedetected = {
   "shieldParameters": []
 };
 
-csrfRequests.requestAPIWithCSRF(createShield, shield);
+csrfRequests.requestAPIWithCSRF(createShield, shieldliquiddetected);
 //csrfRequests.requestAPIWithCSRF(createShield, shieldsensoropened);
 //csrfRequests.requestAPIWithCSRF(createShield, shieldsmokedetected);
